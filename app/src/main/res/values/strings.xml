@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Traning App</string>
+    <string name="title_activity_profile">Profile</string>
+
+    <string name="WORKOUT">WORKOUT</string>
+    <string name="PROFILE">PROFILE</string>
+    <string name="CLIENT">CLIENTS</string>
+    <string name="COMPETITION">COMPET</string>
+
+    <string name="Trainings">Тренировки</string>
+    <string name="Clients">Клиенты</string>
+    <string name="Competitions">Соревнования</string>
+
+    <string name="Training">Тренировка</string>
+    <string name="Client">Клиент</string>
+    <string name="Competition">Соревнование</string>
+
+    <string name="Create_Training">Создать тренировку</string>
+    <string name="Create_Client">Создать клиента</string>
+    <string name="Create_Competition">Создать соревнование</string>
+
+    <string name="Measure">Показатели</string>
+    <string name="ADD_CLIENT">Добавить клиента</string>
+    <string name="Profile">Профиль</string>
+
+    <string name="Create">Создать</string>
+    <string name="ADD">Добавить</string>
+    <string name="Edit">Изменить</string>
+
+    <string name="LogIn">Войти</string>
+    <string name="Register">Зарегистрироваться</string>
+    <string name="NotRegister">Еще не зарегистрированы?</string>
+
+    <string name="logo">Logo</string>
+    <string name="delete">Удалить</string>
+</resources>

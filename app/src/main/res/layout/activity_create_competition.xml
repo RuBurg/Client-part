@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainPage"
+    android:onClick="ProfileBtnClick"
+    tools:context=".CreateCompetition">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="WorkoutBtnClick"
+            android:text="@string/WORKOUT" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ClientsBtnClick"
+            android:text="@string/CLIENT" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="CompetBtnClick"
+            android:text="@string/COMPETITION" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ProfileBtnClick"
+            android:text="@string/PROFILE" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button13"
+        style="@style/SmallGreenButtonStyle"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/Create"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button14"
+        style="@style/SmallGreenButtonStyle"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="AddClientToCompetition"
+        android:text="@string/ADD"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/Headliners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Create_Competition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNameCompetition"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Название"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Дата"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameCompetition" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Адрес"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CreateCompetitionList"
+        android:layout_width="409dp"
+        android:layout_height="351dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress"
+        app:layout_constraintVertical_bias="0.571"
+        tools:listitem="@layout/list_create_competition" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

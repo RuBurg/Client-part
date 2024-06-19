@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainPage"
+    tools:context=".CreateTraining">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="WorkoutBtnClick"
+            android:text="@string/WORKOUT" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ClientsBtnClick"
+            android:text="@string/CLIENT" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="CompetBtnClick"
+            android:text="@string/COMPETITION" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ProfileBtnClick"
+            android:text="@string/PROFILE" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/Headliners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Create_Training"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button15"
+        style="@style/SmallGreenButtonStyle"
+        android:layout_marginEnd="40dp"
+        android:text="@string/Create"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button16"
+        style="@style/SmallGreenButtonStyle"
+        android:layout_marginStart="40dp"
+        android:onClick="btnAddExe"
+        android:text="@string/ADD"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Выберите клиента"
+        android:inputType="text"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:onClick="NewClientBtnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="230dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Дата тренировки"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CreateTraningList"
+        android:layout_width="409dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate2"
+        tools:listitem="@layout/list_create_training" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

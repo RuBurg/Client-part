@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainPage"
+    tools:context=".Competition">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="WorkoutBtnClick"
+            android:text="@string/WORKOUT" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ClientsBtnClick"
+            android:text="@string/CLIENT" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="CompetBtnClick"
+            android:text="@string/COMPETITION" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ProfileBtnClick"
+            android:text="@string/PROFILE" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/CompetDate"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/CompetitionList"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/CompetName"
+        style="@style/Headliners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Competition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NameOfCompetition"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompetName" />
+
+
+    <TextView
+        android:id="@+id/CompetAddress"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="55dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/CompetDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CompetitionList"
+        android:layout_width="409dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/list_competition" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

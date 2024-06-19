@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trainingPG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainPage"
+    tools:context=".Training">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="WorkoutBtnClick"
+            android:text="@string/WORKOUT" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ClientsBtnClick"
+            android:text="@string/CLIENT" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="CompetBtnClick"
+            android:text="@string/COMPETITION" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/MenuButtons"
+            android:layout_weight="1"
+            android:onClick="ProfileBtnClick"
+            android:text="@string/PROFILE" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/Headliners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Training"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ClientTrain"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/DateTrain"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/ClientSNameTrain"
+        style="@style/UsualText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClientTrain" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TrainingList"
+        android:layout_width="409dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateTrain"
+        tools:listitem="@layout/list_training" />
+</androidx.constraintlayout.widget.ConstraintLayout>

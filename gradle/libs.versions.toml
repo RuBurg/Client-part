@@ -1,0 +1,55 @@
+[versions]
+agp = "8.3.0"
+initializr = "0.6.0.RELEASE"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.11.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+kotlin = "1.9.0"
+lifecycleRuntimeKtx = "2.7.0"
+activityCompose = "1.9.0"
+composeBom = "2023.08.00"
+multidex = "2.0.1"
+postgresql = "42.7.3"
+retrofit = "2.11.0"
+springBootStarterWeb = "3.3.0"
+springContext = "6.1.8"
+springDataJpa = "3.3.0"
+
+[libraries]
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+initializr = { module = "io.spring.initializr:initializr", version.ref = "initializr" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "springBootStarterWeb" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springBootStarterWeb" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBootStarterWeb" }
+spring-context = { module = "org.springframework:spring-context", version.ref = "springContext" }
+spring-data-jpa = { module = "org.springframework.data:spring-data-jpa", version.ref = "springDataJpa" }
+spring-web = { module = "org.springframework:spring-web", version.ref = "springContext" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
